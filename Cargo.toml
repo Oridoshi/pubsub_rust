@@ -13,7 +13,6 @@ rcgen = "0.14.10"
 directories-next = "2.0.0"
 url = "2.5.8"
 bytes = "1.12.1"
-jobsys = { path = "../jobsys" }
 
 [dev-dependencies]
 criterion = { version = "0.8.2", features = ["html_reports"] }
