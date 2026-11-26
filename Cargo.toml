@@ -1,0 +1,35 @@
+[package]
+name = "pubsub"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quinn = "0.11.12"
+anyhow = "1.0.104"
+rustls = "0.23.46"
+tracing = "0.1.44"
+tokio = { version = "1.54.1", features = ["rt", "rt-multi-thread", "macros"] }
+rcgen = "0.14.10"
+directories-next = "2.0.0"
+url = "2.5.8"
+bytes = "1.12.1"
+jobsys = { path = "../jobsys" }
+
+[dev-dependencies]
+criterion = { version = "0.8.2", features = ["html_reports"] }
+hdrhistogram = "7.6.0"
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "time", "macros"] }
+
+[[bench]]
+name = "pubsub_bench"
+harness = false
+
+[[bench]]
+name = "latency_report"
+harness = false
+
+
+[[bench]]
+name = "netem_report"
+harness = false
+
